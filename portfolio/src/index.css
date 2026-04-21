@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* CSS Variables */
+:root {
+  --acc: #7c6dfa;
+  --acc2: #a78bfa;
+  --acc3: #06d6a0;
+  --border: rgba(124, 109, 250, 0.15);
+  --glow: rgba(124, 109, 250, 0.08);
+}
+
+.light-mode {
+  --acc: #5b4ee8;
+  --acc2: #7c6dfa;
+  --acc3: #059669;
+  --border: rgba(91, 78, 232, 0.12);
+  --glow: rgba(91, 78, 232, 0.05);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c6dfa55;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f8f8fc;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Utility classes */
+.font-head {
+  font-family: "Poppins", sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--acc), var(--acc2) 50%, var(--acc3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typing cursor */
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--acc);
+}
+
+/* Badge dot */
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acc3);
+  animation: pulse-dot 2s ease infinite;
+  display: inline-block;
+}
+
+/* Timeline line */
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--acc), transparent);
+}
+
+/* Hero grid pattern */
+.hero-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Card hover glow */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--acc), var(--acc3));
+  opacity: 0;
+  transition: opacity 0.25s;
+  border-radius: 16px 16px 0 0;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Form focus ring */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--acc) !important;
+}
+
+/* Smooth section transitions */
+section {
+  transition: background-color 0.4s;
+}
