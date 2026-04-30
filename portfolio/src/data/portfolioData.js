@@ -63,8 +63,8 @@ export const projects = [
       "Full-stack event booking platform enabling users to browse, book, and manage events with secure authentication and role-based access control for admins and regular users.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Mongoose"],
     category: "fullstack",
-    github: "#",
-    live: "#",
+    github: "https://github.com/Vardhan158/Event",
+    live: "https://event-1-0366.onrender.com",
   },
   {
     id: 2,
@@ -74,8 +74,8 @@ export const projects = [
       "Feature-rich blogging platform with complete CRUD operations, JWT-based authentication, role-based access, and optimized database queries for fast, scalable performance.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"],
     category: "fullstack",
-    github: "#",
-    live: "#",
+    github: "https://github.com/Vardhan158/Blog",
+    live: "https://blog-1-eajx.onrender.com",
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const projects = [
       "Solar-powered EV charging management app with real-time monitoring dashboard, session tracking, and energy metrics — promoting sustainable infrastructure adoption.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Real-time"],
     category: "fullstack",
-    github: "#",
+    github: "https://github.com/Vardhan158/solar-ev",
     live: "https://solar-ev-frontend.onrender.com",
   },
   {
@@ -96,8 +96,8 @@ export const projects = [
       "Pet adoption and care platform allowing users to browse pets and submit adoption requests. Includes JWT auth, RBAC, and full admin management workflow.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT/RBAC"],
     category: "fullstack",
-    github: "#",
-    live: "#",
+    github: "https://github.com/Vardhan158/pet-pal",
+    live: "https://pet-pal-front.onrender.com",
   },
   {
     id: 5,
@@ -109,18 +109,7 @@ export const projects = [
     category: "frontend",
     github: null,
     live: "https://www.lumarqi.com/",
-  },
-  {
-    id: 6,
-    icon: "🔐",
-    title: "Auth & API Boilerplate",
-    description:
-      "Reusable MERN stack boilerplate with JWT authentication, protected routes, role-based access control, and RESTful API scaffolding for rapid project bootstrapping.",
-    tech: ["Node.js", "Express.js", "MongoDB", "JWT", "REST"],
-    category: "backend",
-    github: "#",
-    live: null,
-  },
+  }
 ];
 
 export const projectFilters = [
